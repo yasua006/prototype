@@ -20,6 +20,12 @@ def remove_dir(dir_name: str) -> None:
     run_cmd(f"rm -r {dir_name}")
     list_dir_helper()
 
+def remove_empty_dir(dir_name: str) -> None:
+    from modules.handler import handle_empty_name
+    handle_empty_name(dir_name)
+    run_cmd(f"rmdir {dir_name}")
+    list_dir_helper()
+
 
 def change_cd(existing_dir: str) -> None:
     from modules.handler import handle_empty_name
