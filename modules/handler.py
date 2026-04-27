@@ -28,6 +28,9 @@ def handle_answers() -> None:
         case 4:
             existing_dir: str = input("Existing folder name: ")
             change_cd(existing_dir)
+        case 5:
+            dir_name: str = input("Folder name to add and go to: ")
+            create_change_dir(dir_name)
         case 99:
             print("You quit program.")
             sys.exit(1)

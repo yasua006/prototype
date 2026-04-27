@@ -1,5 +1,5 @@
 # Prototype
-En Python app for å legge til, fjerne, eller bytte mapper lettere enn manuelt på terminalen.
+En Python app for å legge til, fjerne, eller bytte mapper lettere enn manuelt på terminalen. Kombinasjoner inkludert.
 
 
 ## Kjøring
@@ -12,4 +12,4 @@ python3 main.py
 
 
 ## Demo
-![Showing program start for choice 1 (add folder)](./images/program_start_choice_1.png)
+![Showing program start for choice 5 (add and go to folder combo)](./images/program_start_choice_5.png)

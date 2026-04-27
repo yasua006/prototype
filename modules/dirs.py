@@ -37,3 +37,8 @@ def change_cd(existing_dir: str) -> None:
     from modules.handler import handle_empty_name
     handle_empty_name(existing_dir)
     list_dir_helper()
+
+
+def create_change_dir(dir_name: str) -> None:
+    create_dir(dir_name)
+    change_cd(dir_name)
