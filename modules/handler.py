@@ -1,6 +1,6 @@
 import sys
 
-from modules.dirs import create_dir, remove_dir, change_cd
+from modules.dirs import *
 
 
 def handle_empty_name(name: str):
@@ -23,6 +23,9 @@ def handle_answers() -> None:
             dir_name: str = input("Folder name to delete: ")
             remove_dir(dir_name)
         case 3:
+            dir_name: str = input("Empty folder name to delete: ")
+            remove_empty_dir(dir_name)
+        case 4:
             existing_dir: str = input("Existing folder name: ")
             change_cd(existing_dir)
         case 99:
