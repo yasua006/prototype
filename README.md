@@ -3,9 +3,9 @@ En Python app for å legge til, fjerne, eller bytte mapper lettere enn manuelt p
 
 
 ## Kjøring
-´´´sh
+```sh
 python3 main.py
-´´´
+```
 
 > [!NOTE]
 > Bytt til python eller py fra python3 hvis på Windows
