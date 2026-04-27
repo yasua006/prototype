@@ -4,7 +4,8 @@ from modules.run_cmd import *
 def list_dir_helper() -> None:
     list_dir_result = sp.run(["ls"], text=True, shell=True,
         capture_output=True)
-    print("Listing directory...\n", list_dir_result.stdout)
+    print("Listing directory...\n",
+        list_dir_result.stdout or "Folder is empty")
 
 
 def create_dir(dir_name: str) -> None:
@@ -30,5 +31,8 @@ def remove_empty_dir(dir_name: str) -> None:
 def change_cd(existing_dir: str) -> None:
     from modules.handler import handle_empty_name
     handle_empty_name(existing_dir)
-    run_cmd(f"cd {existing_dir}")
-    list_dir_helper()
+
+    ls_output = sp.run(["ls"], text=True, shell=True,
+        capture_output=True, cwd=existing_dir)
+    print("Listing directory...\n",
+        ls_output.stdout or "Nothing to display inside. Folder is empty")
