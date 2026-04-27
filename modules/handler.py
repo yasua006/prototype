@@ -1,6 +1,7 @@
 import sys
 
 from modules.dirs import *
+from modules.files import *
 
 
 def handle_empty_name(name: str):
@@ -31,6 +32,12 @@ def handle_answers() -> None:
         case 5:
             dir_name: str = input("Folder name to add and go to: ")
             create_change_dir(dir_name)
+        case 6:
+            file_name: str = input("File name to add: ")
+            create_file(file_name)
+        case 7:
+            file_name: str = input("File name to delete: ")
+            remove_file(file_name)
         case 99:
             print("You quit program.")
             sys.exit(1)

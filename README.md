@@ -1,5 +1,5 @@
 # Prototype
-En Python app for å legge til, fjerne, eller bytte mapper lettere enn manuelt på terminalen. Kombinasjoner inkludert.
+En Python app for å legge til, fjerne filer eller mapper, eller bytte mapper lettere enn manuelt på terminalen. Kombinasjoner inkludert.
 
 
 ## Kjøring
