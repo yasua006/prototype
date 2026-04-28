@@ -18,6 +18,8 @@ def main() -> None:
     print("6. Create a file")
     print("7. Delete a file (permanent)\n")
 
+    print("8. Rename folder or file\n")
+
     print(f"{bold}Combos{end_bold}") 
     print("5. Create and go to - folder\n")
      

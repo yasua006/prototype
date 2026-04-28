@@ -2,6 +2,7 @@ import sys
 
 from modules.dirs import *
 from modules.files import *
+from modules.rename import *
 
 
 def handle_empty_name(name: str):
@@ -38,6 +39,10 @@ def handle_answers() -> None:
         case 7:
             file_name: str = input("File name to delete: ")
             remove_file(file_name)
+        case 8:
+            old_name: str = input("Current folder or file name: ")
+            new_name: str = input("New folder or file name: ")
+            rename(old_name, new_name)
         case 99:
             print("You quit program.")
             sys.exit(1)
