@@ -51,3 +51,7 @@ def move_dir(source: str, target: str) -> None:
     handle_empty_name(target)
     run_cmd(f"mv {source} {target}", working_dir)
     list_dir_helper()
+
+
+def show_current_dir() -> None:
+    list_dir_helper()
