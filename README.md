@@ -1,5 +1,5 @@
 # Prototype
-En Python app for å håndtere filer og mapper lettere enn manuelt, fortsatt på terminalen. Kombinasjoner inkludert.
+En Python program for å håndtere filer og mapper lettere enn manuelt, fortsatt på terminalen. Kombinasjoner inkludert.
 
 
 ## Installering
