@@ -1,5 +1,5 @@
 # Prototype
-En Python app for å legge til, fjerne filer eller mapper, eller bytte mapper lettere enn manuelt på terminalen. Kombinasjoner inkludert.
+En Python app for å håndtere filer og mapper lettere enn manuelt, fortsatt på terminalen. Kombinasjoner inkludert.
 
 
 ## Installering
@@ -7,4 +7,4 @@ En Python app for å legge til, fjerne filer eller mapper, eller bytte mapper le
 
 
 ## Demo
-![Showing program start for choice 5 (add and go to folder combo)](./images/program_start_choice_5.png)
+![Showing program start](./images/program_start.png)
