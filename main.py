@@ -26,7 +26,8 @@ def main() -> None:
     print("10. Create and go to - folder\n")
      
     print(f"{bold}Other{end_bold}")
-    print("99. Quit program")
+    print("98. Show current folder")
+    print("99. Quit program\n")
     # list_dir_helper()
     handle_answers()
 
