@@ -6,8 +6,9 @@ working_dir = None
 def list_dir_helper() -> None:
     list_dir_result = sp.run(["ls"], text=True, shell=True,
         capture_output=True, cwd=working_dir)
-    print("Listing directory...\n",
+    print("\nListing directory...\n",
         list_dir_result.stdout or "Folder is empty")
+    print("\n")
 
 
 def create_dir(dir_name: str) -> None:
