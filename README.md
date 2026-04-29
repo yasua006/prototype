@@ -1,15 +1,10 @@
 # Prototype
-En Python app for å legge til, fjerne filer eller mapper, eller bytte mapper lettere enn manuelt på terminalen. Kombinasjoner inkludert.
+En Python app for å håndtere filer og mapper lettere enn manuelt, fortsatt på terminalen. Kombinasjoner inkludert.
 
 
-## Kjøring
-```sh
-python3 main.py
-```
-
-> [!NOTE]
-> Bytt til python eller py fra python3 hvis på Windows
+## Installering
+[Releases](https://github.com/yasua006/prototype/releases)
 
 
 ## Demo
-![Showing program start for choice 5 (add and go to folder combo)](./images/program_start_choice_5.png)
+![Showing program start](./images/program_start.png)

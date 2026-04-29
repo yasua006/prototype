@@ -1,0 +1,7 @@
+altgraph==0.17.5
+macholib==1.16.4
+Nuitka==4.0.8
+packaging==26.2
+pip_system_certs==5.3
+pyinstaller-hooks-contrib==2026.4
+setuptools==82.0.1

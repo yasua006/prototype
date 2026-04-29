@@ -6,8 +6,9 @@ working_dir = None
 def list_dir_helper() -> None:
     list_dir_result = sp.run(["ls"], text=True, shell=True,
         capture_output=True, cwd=working_dir)
-    print("Listing directory...\n",
+    print("\nListing directory...\n",
         list_dir_result.stdout or "Folder is empty")
+    print("\n")
 
 
 def create_dir(dir_name: str) -> None:
@@ -42,3 +43,11 @@ def change_cd(existing_dir: str) -> None:
 def create_change_dir(dir_name: str) -> None:
     create_dir(dir_name)
     change_cd(dir_name)
+
+
+def move_dir(source: str, target: str) -> None:
+    from modules.handler import handle_empty_name
+    handle_empty_name(source)
+    handle_empty_name(target)
+    run_cmd(f"mv {source} {target}", working_dir)
+    list_dir_helper()
