@@ -11,6 +11,7 @@ def list_dir_helper() -> None:
     print("\n")
 
 
+# fungerer for flere mapper også
 def create_dir(dir_name: str) -> None:
     from modules.handler import handle_empty_name
     handle_empty_name(dir_name)

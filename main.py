@@ -9,7 +9,7 @@ def main() -> None:
 
     print(f"{bold}Folders{end_bold}") 
 
-    print("1. Create a folder")
+    print("1. Create folder(s)")
     print("2. Delete a folder")
     print("3. Delete an empty folder")
     print("4. Go to folder")

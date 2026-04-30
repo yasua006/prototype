@@ -19,7 +19,7 @@ def handle_answers() -> None:
 
     match choice:
         case 1:
-            dir_name: str = input("Folder name to add: ")
+            dir_name: str = input("Folder name(s) to add (separated by space): ")
             create_dir(dir_name)
         case 2:
             dir_name: str = input("Folder name to delete: ")
