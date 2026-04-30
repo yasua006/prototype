@@ -9,16 +9,16 @@ def main() -> None:
 
     print(f"{bold}Folders{end_bold}") 
 
-    print("1. Create a folder")
-    print("2. Delete a folder")
-    print("3. Delete an empty folder")
+    print("1. Create folder(s)")
+    print("2. Delete folder(s)")
+    print("3. Delete empty folder(s)")
     print("4. Go to folder")
     print("5. Move folder\n")
 
     print(f"{bold}Files{end_bold}") 
-    print("6. Create a file")
-    print("7. Delete a file (permanent)")
-    print("8. Move file\n")
+    print("6. Create file(s)")
+    print("7. Delete file(s) [permanent]")
+    print("8. Move file(s)\n")
 
     print("9. Rename folder or file\n")
 
