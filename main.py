@@ -1,0 +1,37 @@
+from modules.handler import handle_answers
+
+
+def main() -> None:
+    bold = "\033[1m"
+    end_bold = "\033[0m"
+
+    print(f"\n{"-"*16} Prototype {"-"*16}")
+
+    print(f"{bold}Folders{end_bold}") 
+
+    print("1. Create folder(s)")
+    print("2. Delete folder(s)")
+    print("3. Delete empty folder(s)")
+    print("4. Go to folder")
+    print("5. Move folder\n")
+
+    print(f"{bold}Files{end_bold}") 
+    print("6. Create file(s)")
+    print("7. Delete file(s) [permanent]")
+    print("8. Move file(s)\n")
+
+    print("9. Rename folder or file\n")
+
+    print(f"{bold}Combos{end_bold}") 
+    print("10. Create and go to - folder\n")
+     
+    print(f"{bold}Other{end_bold}")
+    print("98. Show current folder")
+    print("99. Quit program\n")
+    # list_dir_helper()
+    handle_answers()
+
+
+if __name__ == "__main__":
+    while True:
+        main() 
