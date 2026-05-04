@@ -8,8 +8,13 @@ def list_dir_helper() -> None:
     list_dir_result = sp.run(["ls"], text=True, shell=True,
         capture_output=True, cwd=working_dir)
 
+    folder_name = sp.run(
+        ['basename "$(pwd)"'], text=True, shell=True,
+        capture_output=True, cwd=working_dir
+    )
+
     print(
-        f"\n{bold}Current folder{end_bold}\n {list_dir_result.stdout or "Folder is empty"}"
+        f"\n{bold}Current folder: {folder_name.stdout.strip()}{end_bold}\n {list_dir_result.stdout or "Folder is empty"}"
     )
     print("\n")
 
