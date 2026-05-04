@@ -1,4 +1,5 @@
 from modules.run_cmd import *
+from modules.bold_unicodes import *
 
 working_dir = None
 
@@ -6,8 +7,10 @@ working_dir = None
 def list_dir_helper() -> None:
     list_dir_result = sp.run(["ls"], text=True, shell=True,
         capture_output=True, cwd=working_dir)
-    print("\nListing directory...\n",
-        list_dir_result.stdout or "Folder is empty")
+
+    print(
+        f"\n{bold}Current folder{end_bold}\n {list_dir_result.stdout or "Folder is empty"}"
+    )
     print("\n")
 
 

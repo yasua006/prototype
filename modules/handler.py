@@ -12,48 +12,43 @@ def handle_empty_name(name: str):
 
 
 def handle_answers() -> None:
-    try:
-        choice: int = int(input("Choice: "))
-    except Exception:
-        choice = 0
+    choice: str = input("Choice: ")
 
     match choice:
-        case 1:
+        case "1a":
             dir_name: str = input("Folder name(s) to add (separated by space): ")
             create_dir(dir_name)
-        case 2:
+        case "1b":
+            file_name: str = input("File name to add: ")
+            create_file(file_name)
+        case "2a":
             dir_name: str = input("Folder name to delete: ")
             remove_dir(dir_name)
-        case 3:
+        case "2b":
+            file_name: str = input("File name to delete: ")
+            remove_file(file_name)
+        case "3":
             dir_name: str = input("Empty folder name to delete: ")
             remove_empty_dir(dir_name)
-        case 4:
+        case "4":
             existing_dir: str = input("Existing folder name: ")
             change_cd(existing_dir)
-        case 5:
+        case "5a":
             source: str = input("Folder name to move: ")
             target: str = input("Folder name to move to: ")
             move_dir(source, target)
-        case 6:
-            file_name: str = input("File name to add: ")
-            create_file(file_name)
-        case 7:
-            file_name: str = input("File name to delete: ")
-            remove_file(file_name)
-        case 8:
+        case "5b":
             source: str = input("File name to move: ")
             target: str = input("Folder name to move file to: ")
             move_file(source, target)
-        case 9:
+        case "6":
             old_name: str = input("Current folder or file name: ")
             new_name: str = input("New folder or file name: ")
             rename(old_name, new_name)
-        case 10:
+        case "7":
             dir_name: str = input("Folder name to add and go to: ")
             create_change_dir(dir_name)
-        case 98:
-            show_current_dir()
-        case 99:
+        case "99":
             print("You quit program.")
             sys.exit(1)
         case _:
