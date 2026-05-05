@@ -1,10 +1,11 @@
 from modules.bold_unicodes import *
-from modules.handler import handle_answers
 from modules.dirs import list_dir_helper
 
 
 
 def main() -> None:
+    from modules.handler import handle_answers
+
     print(f"\n{"-"*16} Prototype {"-"*16}")
 
     print(f"{bold}Folders and Files{end_bold}") 

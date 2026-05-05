@@ -1,7 +1,10 @@
 from modules.run_cmd import *
 from modules.bold_unicodes import *
+from modules import shortcuts
 
 working_dir = None
+
+log_file = open("log.txt", "a+")
 
 
 def list_dir_helper() -> None:
@@ -41,12 +44,28 @@ def remove_empty_dir(dir_name: str) -> None:
 
 
 def change_cd(existing_dir: str) -> None:
-    global working_dir
-    working_dir = existing_dir
+    cuts: str = existing_dir.lower().strip()
 
-    from modules.handler import handle_empty_name
-    handle_empty_name(existing_dir)
+    global working_dir
+    log_file.write(f"\nPrevious working dir. {working_dir or "program default path"}\n")
+
+    match cuts: 
+        case shortcuts.docs:
+            print("Documents shortcut")
+            working_dir = "Documents"
+            log_file.write(f"Working dir: {working_dir}\n")
+        case shortcuts.desk:
+            print("Desktop shortcut")
+            working_dir = "Desktop"
+            log_file.write(f"Working dir: {working_dir}\n")
+        case _:
+            working_dir = existing_dir
+
+            from modules.handler import handle_empty_name
+            handle_empty_name(existing_dir)
+
     list_dir_helper()
+    # log_file.close()
 
 
 def create_change_dir(dir_name: str) -> None:

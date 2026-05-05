@@ -5,7 +5,7 @@ from modules.files import *
 from modules.rename import *
 
 
-def handle_empty_name(name: str):
+def handle_empty_name(name: str) -> None:
     if not name:
         print("Empty or invalid name! Exiting...")
         sys.exit(1)
@@ -19,16 +19,16 @@ def handle_answers() -> None:
             dir_name: str = input("Folder name(s) to add (separated by space): ")
             create_dir(dir_name)
         case "1b":
-            file_name: str = input("File name to add: ")
+            file_name: str = input("File name(s) to add (separated by space): ")
             create_file(file_name)
         case "2a":
-            dir_name: str = input("Folder name to delete: ")
+            dir_name: str = input("Folder name(s) to delete (separated by space): ")
             remove_dir(dir_name)
         case "2b":
-            file_name: str = input("File name to delete: ")
+            file_name: str = input("File name(s) to delete (separated by space): ")
             remove_file(file_name)
         case "3":
-            dir_name: str = input("Empty folder name to delete: ")
+            dir_name: str = input("Empty folder name(s) to delete (separated by space): ")
             remove_empty_dir(dir_name)
         case "4":
             existing_dir: str = input("Existing folder name: ")
@@ -38,7 +38,7 @@ def handle_answers() -> None:
             target: str = input("Folder name to move to: ")
             move_dir(source, target)
         case "5b":
-            source: str = input("File name to move: ")
+            source: str = input("File name(s) to move (separated by space): ")
             target: str = input("Folder name to move file to: ")
             move_file(source, target)
         case "6":
