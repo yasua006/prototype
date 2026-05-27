@@ -14,7 +14,7 @@ def main() -> None:
         "Delete folder(s)", "Delete file(s) [permanent]",
         "Delete empty folder(s)",
         "Go to folder",
-        "Move folder", "Move file(s)",
+        "Cut and paste folder or file",
         "Rename folder or file",
         "Copy and paste folder or file",
         "Create and go to - folder",

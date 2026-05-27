@@ -73,13 +73,5 @@ def create_change_dir(dir_name: str) -> None:
     change_cd(dir_name)
 
 
-def move_dir(source: str, target: str) -> None:
-    from modules.handler import handle_empty_name
-    handle_empty_name(source)
-    handle_empty_name(target)
-    run_cmd(f"mv {source} {target}", working_dir)
-    list_dir_helper()
-
-
 def show_current_dir() -> None:
     list_dir_helper()
