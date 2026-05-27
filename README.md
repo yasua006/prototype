@@ -7,4 +7,4 @@ En Python program for å håndtere filer og mapper lettere enn manuelt, fortsatt
 
 
 ## Demo
-![Showing program start](./images/program_start.png)
+![Showing program start](./images/program-start.png)
