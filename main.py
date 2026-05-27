@@ -16,6 +16,7 @@ def main() -> None:
         "Go to folder",
         "Move folder", "Move file(s)",
         "Rename folder or file",
+        "Copy and paste folder or file",
         "Create and go to - folder",
         "Quit program"
     ]

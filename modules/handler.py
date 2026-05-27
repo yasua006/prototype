@@ -3,6 +3,7 @@ import sys
 from modules.dirs import *
 from modules.files import *
 from modules.rename import *
+from modules.copy_paste import *
 
 
 def handle_empty_name(name: str) -> None:
@@ -43,9 +44,13 @@ def handle_answers(options: list[str], choice) -> None:
         new_name: str = input("New folder or file name: ")
         rename(old_name, new_name)
     if choice == options[9]:
+        copy: str = input("Folder or file name to copy: ")
+        paste_loc: str = input("Location to paste copied: ")
+        copy_paste(copy, paste_loc)
+    if choice == options[10]:
         dir_name: str = input("Folder name to add and go to: ")
         create_change_dir(dir_name)
-    if choice == options[10]:
+    if choice == options[11]:
         print("You quit program.")
         sys.exit(1)
     
