@@ -3,8 +3,8 @@ import sys
 from modules.dirs import *
 from modules.files import *
 from modules.rename import *
-from modules.cut_paste import *
 from modules.copy_paste import *
+from modules.cut_paste import *
 
 
 def handle_empty_name(name: str) -> None:
@@ -33,19 +33,19 @@ def handle_answers(options: list[str], choice) -> None:
         existing_dir: str = input("Existing folder name: ")
         change_cd(existing_dir)
     if choice == options[6]:
-        source: str = input("Folder or file name to cut: ")
-        target: str = input("Location to paste cut: ")
-        move(source, target)
-    if choice == options[7]:
-        old_name: str = input("Current folder or file name: ")
-        new_name: str = input("New folder or file name: ")
+        old_name: str = input("Current folder or file name(s): ")
+        new_name: str = input("New folder or file name(s): ")
         rename(old_name, new_name)
-    if choice == options[8]:
-        copy: str = input("Folder or file name to copy: ")
+    if choice == options[7]:
+        copy: str = input("Folder or file name(s) to copy: ")
         paste_loc: str = input("Location to paste copied: ")
         copy_paste(copy, paste_loc)
+    if choice == options[8]:
+        cut: str = input("Folder or file name(s) to cut: ")
+        paste_loc: str = input("Location to paste cut: ")
+        cut_paste(cut, paste_loc)
     if choice == options[9]:
-        dir_name: str = input("Folder name to add and go to: ")
+        dir_name: str = input("Folder name(s) to add and go to: ")
         create_change_dir(dir_name)
     if choice == options[10]:
         print("You quit program.")
